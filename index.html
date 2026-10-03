@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Генераторы</title>
+<style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0; min-height: 100vh; padding: 40px 20px;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        background: radial-gradient(1200px 600px at 50% -10%, #1b2230 0%, #12141a 60%);
+        color: #d8dce2;
+    }
+    h1 { font-size: 28px; margin: 0 0 6px; text-align: center; }
+    .sub { color: #7a8494; font-size: 14px; margin-bottom: 34px; text-align: center; }
+    .grid {
+        display: grid; gap: 16px; width: 100%; max-width: 980px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    a.card {
+        display: block; text-decoration: none; color: inherit;
+        background: #1b1f27; border: 1px solid #2a2f3a; border-radius: 14px;
+        padding: 22px 22px 24px; transition: border-color .15s, transform .15s, background .15s;
+        position: relative; overflow: hidden;
+    }
+    a.card::before {
+        content: ''; position: absolute; inset: 0 auto 0 0; width: 3px;
+        background: var(--accent, #4aa3ff); opacity: .85;
+    }
+    a.card:hover { border-color: var(--accent, #4aa3ff); background: #1f2531; transform: translateY(-3px); }
+    .card .tag { font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+                 color: var(--accent, #4aa3ff); }
+    .card h2 { margin: 8px 0 8px; font-size: 19px; }
+    .card p { margin: 0; color: #8892a2; font-size: 13.5px; line-height: 1.5; }
+    footer { margin-top: 34px; color: #626b7a; font-size: 12.5px; text-align: center; }
+</style>
+</head>
+<body>
+    <h1>Генераторы</h1>
+    <div class="sub">Неофициальные инструменты для НРИ и варгеймов. Standalone HTML, без сервера и внешних зависимостей.</div>
+
+    <div class="grid">
+        <a class="card" href="https://dexius9669.github.io/pages/Dungeon_Gen.html" style="--accent:#c9a06a">
+            <div class="tag">OD&amp;D · соло</div>
+            <h2>Dungeon Gen</h2>
+            <p>Генератор подземелья для соло-игры «вслепую»: без карты и спойлеров, только журнал бросков.</p>
+        </a>
+
+        <a class="card" href="https://dexius9669.github.io/hexcrawl/" style="--accent:#3fa34d">
+            <div class="tag">Гекскроул · DaD</div>
+            <h2>Генератор гекскроула</h2>
+            <p>Заселение, карта, встречи и путешествие по «Dragons at Dawn»: заселение, ростер монстров, сокровища логова.</p>
+        </a>
+
+        <a class="card" href="https://dexius9669.github.io/tony_bbath_gen/" style="--accent:#4aa3ff">
+            <div class="tag">Варгейм-кампания · Tony Bath</div>
+            <h2>Инструменты Тони Бата</h2>
+            <p>Личности, экономика, гексы, осады, бой, погода, движение, разведка, снабжение и события кампании.</p>
+        </a>
+    </div>
+
+    <footer>Неофициальные фанатские инструменты, не связаны с правообладателями. Открываются локально и без интернета.</footer>
+</body>
+</html>
